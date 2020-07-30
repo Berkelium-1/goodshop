@@ -1,0 +1,129 @@
+.user {
+    width: 100vw;
+    height: 100vh;
+    background-color: #eee;
+    overflow-y: auto;
+
+    .user-header {
+        height: 500rpx;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .user-info {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+
+            .img-bg {
+                position: absolute;
+                width: 107%;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+                filter: blur(12rpx);
+            }
+
+            .info-box {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                color: white;
+
+                image {
+                    width: 30%;
+                    border: 4rpx solid #b1b1b1;
+                    border-radius: 50%;
+                }
+
+                .info-name {
+                    margin-top: 20rpx;
+                    font-size: 36rpx;
+                    font-weight: bolder;
+                }
+            }
+        }
+
+        .login-btn {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f0f0f0;
+        }
+    }
+
+    //
+    .user-nav {
+        margin: 0 auto;
+        // width: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        // background-color: #ffffff;
+
+
+        >navigator {
+            margin: 30rpx;
+            padding: 30rpx 40rpx;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #ffffff;
+            border-radius: 8rpx;
+            color: #464646;
+
+        }
+
+        .iconfont {
+            font-size: 40rpx;
+            padding-bottom: 20rpx;
+        }
+    }
+
+    //
+    .user-list {
+        width: 90vw;
+        margin: 0 auto;
+
+        >view {
+            margin-top: 10rpx;
+            width: 100%;
+            height: 80rpx;
+            line-height: 80rpx;
+            color: #464646;
+            background-color: #ffffff;
+            padding-left: 50rpx;
+
+            &:active {
+                background-color: #b1b1b1;
+
+            }
+        }
+
+        .kefu {
+            position: relative;
+
+            button {
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                opacity: 0;
+            }
+        }
+    }
+
+
+}

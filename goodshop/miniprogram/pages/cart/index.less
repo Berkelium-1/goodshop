@@ -1,0 +1,174 @@
+.cart {
+    width: 100vw;
+    padding-bottom: 90rpx;
+
+    .revice-address {
+        border-bottom: 4rpx solid var(--themeColor);
+
+        .address-btn {
+            padding: 20rpx;
+
+            button {
+                width: 60%;
+            }
+        }
+
+        .address-info {
+            padding: 20rpx 40rpx;
+            display: flex;
+            flex-direction: column;
+
+
+
+            view {
+                display: flex;
+                justify-content: space-between;
+            }
+
+        }
+    }
+
+
+    //
+    .cart-content {
+        width: 100vw;
+        overflow-y: auto;
+
+        .cart-item {
+            width: 100%;
+            display: flex;
+            border-bottom: 2rpx solid #ccc;
+
+            .chenk-box {
+                flex: 1;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .cart-img {
+                flex: 2;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .cart-info {
+                padding: 20rpx;
+                flex: 5;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+
+
+                .info-name {
+                    display: -webkit-box;
+                    overflow: hidden;
+                    -webkit-box-orient: vertical;
+                    -webkit-line-clamp: 2;
+                    color: #666;
+                }
+
+                .number-wraper {
+                    display: flex;
+                    justify-content: space-between;
+
+
+                    .price {
+                        flex: 2;
+                        color: var(--themeColor);
+                    }
+
+                    .stepper {
+                        flex: 1;
+                        display: flex;
+                        justify-content: space-between;
+
+
+                        .btn {
+                            flex: 1;
+                            border: 2rpx solid #cccccc;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            color: #a1a1a1;
+                        }
+
+                        .num {
+                            flex: 2;
+                            text-align: center;
+                            overflow: hidden;
+                            word-wrap: normal;
+                            text-overflow: ellipsis;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    //
+    .footer-tabs {
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100vw;
+        height: 90rpx;
+        display: flex;
+        box-shadow: 0 -1rpx 5rpx 1rpx #ddd;
+
+        .all-check {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .price-total {
+            flex: 5;
+            display: flex;
+            align-items: center;
+
+
+            .total-text {
+                font-size: 24rpx;
+                margin-left: auto;
+            }
+
+            .total-num {
+                font-size: 32rpx;
+                margin-right: 20rpx;
+                color: var(--themeColor);
+            }
+
+        }
+
+        .pay-btn {
+            flex: 2;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: var(--themeColor);
+            color: white;
+        }
+    }
+
+    //
+    .content-null {
+        margin-top: 240rpx;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: #aaa;
+
+        .iconfont {
+            font-size: 120rpx;
+        }
+
+        .text {
+            margin-top: 80rpx;
+            font-size: 40rpx;
+        }
+    }
+}

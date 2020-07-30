@@ -1,0 +1,102 @@
+.pay {
+  width: 100vw;
+  padding-bottom: 90rpx;
+}
+.pay .revice-address {
+  border-bottom: 4rpx solid var(--themeColor);
+}
+.pay .revice-address .address-btn {
+  padding: 20rpx;
+}
+.pay .revice-address .address-btn button {
+  width: 60%;
+}
+.pay .revice-address .address-info {
+  padding: 20rpx 40rpx;
+  display: flex;
+  flex-direction: column;
+}
+.pay .revice-address .address-info view {
+  display: flex;
+  justify-content: space-between;
+}
+.pay .content {
+  width: 100vw;
+  overflow-y: auto;
+}
+.pay .content .content-title {
+  padding: 30rpx 10rpx;
+  font-size: 32rpx;
+  border-bottom: 4rpx solid var(--themeColor);
+}
+.pay .content .goods-item {
+  width: 100%;
+  display: flex;
+  border-bottom: 2rpx solid #ccc;
+}
+.pay .content .goods-item .goods-img {
+  flex: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.pay .content .goods-item .goods-info {
+  padding: 20rpx;
+  flex: 5;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.pay .content .goods-item .goods-info .info-name {
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  color: #666;
+}
+.pay .content .goods-item .goods-info .number-wraper {
+  display: flex;
+  justify-content: space-between;
+}
+.pay .content .goods-item .goods-info .number-wraper .price {
+  flex: 1;
+  color: var(--themeColor);
+}
+.pay .content .goods-item .goods-info .number-wraper .num {
+  padding-right: 12rpx;
+  text-align: center;
+  overflow: hidden;
+  word-wrap: normal;
+  text-overflow: ellipsis;
+}
+.pay .footer-tabs {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100vw;
+  height: 90rpx;
+  display: flex;
+  box-shadow: 0 -1rpx 5rpx 1rpx #ddd;
+}
+.pay .footer-tabs .price-total {
+  flex: 5;
+  display: flex;
+  align-items: center;
+}
+.pay .footer-tabs .price-total .total-text {
+  font-size: 24rpx;
+  margin-left: auto;
+}
+.pay .footer-tabs .price-total .total-num {
+  font-size: 32rpx;
+  margin-right: 20rpx;
+  color: var(--themeColor);
+}
+.pay .footer-tabs .pay-btn {
+  flex: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--themeColor);
+  color: white;
+}

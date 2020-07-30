@@ -1,0 +1,48 @@
+.order {
+    width: 100vw;
+    height: 100vh;
+    overflow-y: auto;
+
+    .order-item {
+        border-bottom: 3rpx solid var(--themeColor);
+
+        >view {
+            margin: 10rpx auto;
+            display: flex;
+
+            .item-title {
+                padding: 0 20rpx;
+            }
+
+            .item-info {
+                padding: 0 20rpx;
+                flex: 1;
+                text-align: right;
+            }
+
+            .price {
+                color: var(--themeColor);
+            }
+        }
+    }
+
+
+    //
+    .content-null {
+        margin-top: 240rpx;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: #aaa;
+
+        .iconfont {
+            font-size: 120rpx;
+        }
+
+        .text {
+            margin-top: 80rpx;
+            font-size: 40rpx;
+        }
+    }
+}

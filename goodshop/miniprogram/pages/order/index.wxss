@@ -1,0 +1,38 @@
+.order {
+  width: 100vw;
+  height: 100vh;
+  overflow-y: auto;
+}
+.order .order-item {
+  border-bottom: 3rpx solid var(--themeColor);
+}
+.order .order-item > view {
+  margin: 10rpx auto;
+  display: flex;
+}
+.order .order-item > view .item-title {
+  padding: 0 20rpx;
+}
+.order .order-item > view .item-info {
+  padding: 0 20rpx;
+  flex: 1;
+  text-align: right;
+}
+.order .order-item > view .price {
+  color: var(--themeColor);
+}
+.order .content-null {
+  margin-top: 240rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #aaa;
+}
+.order .content-null .iconfont {
+  font-size: 120rpx;
+}
+.order .content-null .text {
+  margin-top: 80rpx;
+  font-size: 40rpx;
+}

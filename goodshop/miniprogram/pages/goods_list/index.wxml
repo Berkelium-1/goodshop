@@ -1,0 +1,33 @@
+<!--pages/goods_list/index.wxml-->
+
+<!-- 搜索框 -->
+<SearchInput></SearchInput>
+
+<!-- 标签栏 -->
+<Tabs tabs="{{tabs}}" bindtapItem="tapTabsItem">
+
+  <!-- 内容1 -->
+  <block wx:if="{{tabs[0].isActive}}">
+    <view class="tab-item">
+      <navigator class="goods-box" wx:for="{{goodsList}}" wx:key="index" url="/pages/goods_detail/index?goods_id={{item.goods_id}}">
+        <view class="goods-img">
+          <image mode="widthFix" src="{{item.goods_small_logo ? item.goods_small_logo : 'https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=606394262,1008040175&fm=26&gp=0.jpg'}}" />
+        </view>
+        <view class="goods-info">
+          <view class="goods-name">{{item.goods_name}}</view>
+          <view class="goods-price">￥{{item.goods_price}}</view>
+        </view>
+      </navigator>
+    </view>
+  </block>
+
+  <!-- 内容2 -->
+  <block wx:elif="{{tabs[1].isActive}}">2</block>
+
+  <!-- 内容3 -->
+  <block wx:elif="{{tabs[2].isActive}}">3</block>
+</Tabs>
+  
+
+
+

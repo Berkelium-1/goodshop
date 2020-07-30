@@ -1,0 +1,73 @@
+<!-- pages/cart/index.wxml -->
+<view class="cart">
+    <!-- 收货地址 -->
+    <view class="revice-address" bind:tap="chooseAddress">
+        <!-- 不存在收货地址 -->
+        <view class="address-btn" wx:if="{{!address.userName}}">
+            <button type="primary" plain>添加收货地址</button>
+        </view>
+        <!-- 存在收货地址 -->
+        <view class="address-info" wx:else>
+            <view>
+                <text class="info-name">{{address.userName}}</text>
+                <text class="info-tel">{{address.telNumber}}</text>
+            </view>
+            <view class="info-address">
+                {{address.provinceName+address.cityName+address.countyName+address.detailInfo}}
+            </view>
+        </view>
+    </view>
+    <!-- 有商品状态 -->
+    <!-- 购物车列表 -->
+    <view class="cart-content" wx:if="{{cart.length}}">
+        <view class="cart-item" wx:for="{{cart}}" wx:key="index">
+            <!-- 复选框 -->
+            <view class="chenk-box">
+                <checkbox-group bindchange="itemChange" data-id="{{item.goods_id}}">
+                    <checkbox checked="{{item.checked}}"></checkbox>
+                </checkbox-group>
+            </view>
+            <!-- 商品图片 -->
+            <navigator class="cart-img" url="/pages/goods_detail/index?goods_id={{item.goods_id}}">
+                <image src="{{item.goods_small_logo}}" mode="widthFix" />
+            </navigator>
+            <!-- 商品信息 -->
+            <view class="cart-info">
+                <view class="info-name">{{item.goods_name}}</view>
+                <view class="number-wraper">
+                    <view class="price">￥{{item.goods_price}}</view>
+                    <view class="stepper">
+                        <view class="btn" bindtap="btnNumEdit" data-id="{{item.goods_id}}" data-num="{{1}}">
+                            +
+                        </view>
+                        <input class="num" value="{{item.num}}" disabled />
+                        <view class="btn" bindtap="btnNumEdit" data-id="{{item.goods_id}}" data-num="{{-1}}">
+                            -
+                        </view>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+    <!-- 空状态 -->
+    <view class="content-null" wx:else>
+        <view class="iconfont  icongouwuche"></view>
+        <view class="text">购物车空空如也, 快去逛逛吧 ~~</view>
+    </view>
+    <!-- 底部栏 -->
+    <view class="footer-tabs">
+        <!-- 全选 -->
+        <view class="all-check">
+            <checkbox-group bindchange="itemAllChecked">
+                <checkbox checked="{{allChecked}}"></checkbox>
+            </checkbox-group>
+        </view>
+        <!-- 合计 -->
+        <view class="price-total">
+            <view class="total-text">合计：</view>
+            <view class="total-num">￥{{totalPrice}}</view>
+        </view>
+        <!-- 结算按钮 -->
+        <view class="pay-btn" bind:tap="pay">结算（{{totalNum}}）</view>
+    </view>
+</view>

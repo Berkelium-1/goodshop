@@ -1,0 +1,43 @@
+<view class="user">
+    <!-- 用户信息 -->
+    <view class="user-header">
+        <!-- 已登录 -->
+        <view class="user-info" wx:if="{{isUser}}">
+            <image class="img-bg" src="{{userInfo.avatarUrl}}" mode="widthFix" />
+            <view class="info-box">
+                <image mode="widthFix" src="{{userInfo.avatarUrl}}" />
+                <view class="info-name">{{userInfo.nickName}}</view>
+            </view>
+        </view>
+        <!-- 未登录 -->
+        <view class="login-btn" wx:else>
+            <button type="primary" plain open-type="getUserInfo" bindgetuserinfo="getUserInfo">
+                登录
+            </button>
+        </view>
+    </view>
+    <!-- 功能导航 -->
+    <view class="user-nav">
+        <navigator class="nav-order" url="/pages/order/index">
+            <i class="iconfont icondingdan"></i>
+            <view>订单</view>
+        </navigator>
+        <navigator class="nav-like">
+            <i class="iconfont iconshoucang"></i>
+            <view>收藏</view>
+        </navigator>
+        <navigator class="nav-share">
+            <i class="iconfont iconfenxiang"></i>
+            <view>分享</view>
+        </navigator>
+    </view>
+    <!-- 功能列表 -->
+    <view class="user-list">
+        <view>地址管理</view>
+        <view class="kefu">
+            <view>联系客服</view>
+            <button open-type="contact"></button>
+        </view>
+        <view>关于我们</view>
+    </view>
+</view>

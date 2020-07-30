@@ -1,0 +1,31 @@
+<!--pages/classify/index.wxml-->
+<view class="yg-classify">
+    <!-- 搜索 -->
+    <SearchInput></SearchInput>
+    <view class="classify-container">
+      <!-- 左侧菜单 -->
+      <scroll-view class="left-menu" scroll-y>
+        <view wx:for="{{leftMenuList}}" wx:key="index" bindtap="tapActive" data-index="{{index}}">
+          <view class="menu-item {{activeIndex === index ? 'active' : ''}}" >{{item}}</view>
+        </view>
+      </scroll-view>
+      <!-- 右侧内容 -->
+      <scroll-view class="right-content" scroll-y>
+        <view class="goods-group" wx:for="{{rightContent}}" wx:key="index">
+          <view class="goods-title">
+            <text>/</text>
+            <view>{{item.cat_name}}</view>
+            <text>/</text>
+          </view>
+          <view class="goods-list">
+            <navigator wx:for="{{item.children}}" wx:for-item="v" wx:for-index="i" wx:key="index" url="/pages/goods_list/index?cid={{v.cat_id}}">
+              <image mode="widthFix" src="{{v.cat_icon}}"></image>
+              <view class="goods-name">{{v.cat_name}}</view>
+            </navigator>
+          </view>
+        </view>
+      </scroll-view>
+    </view>
+</view>
+
+

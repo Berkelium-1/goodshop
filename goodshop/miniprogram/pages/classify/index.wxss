@@ -1,0 +1,65 @@
+/* pages/classify/index.wxss */
+.yg-classify{
+  width: 100vw;
+  height: 100vh;
+}
+
+.yg-classify .classify-container{
+  display: flex;
+  height: calc(100vh - 90rpx);
+}
+.yg-classify .classify-container .left-menu{
+  flex: 2;
+}
+
+/* 左侧菜单 */
+.yg-classify .classify-container .left-menu .menu-item{
+  height: 80rpx;
+  line-height: 80rpx;
+  text-align: center;
+}
+.yg-classify .classify-container .left-menu .menu-item.active{
+  position: relative;
+  color: var(--themeColor);
+}
+.yg-classify .classify-container .left-menu .menu-item.active::after{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 5rpx;
+  height: 100%;
+  background-color: var(--themeColor);
+}
+
+/* 右侧内容 */
+.yg-classify .classify-container .right-content{
+  flex: 5;
+}
+
+.yg-classify .classify-container .right-content .goods-title{
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  padding: 30rpx 0;
+}
+.yg-classify .classify-container .right-content .goods-title text{
+  padding: 0 10rpx;
+  color: #ccc;
+}
+.yg-classify .classify-container .right-content .goods-title view{
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+.yg-classify .classify-container .right-content .goods-list{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+.yg-classify .classify-container .right-content .goods-list navigator{
+  width: 33.33%;
+  padding: 10rpx 40rpx;
+  text-align: center;
+}

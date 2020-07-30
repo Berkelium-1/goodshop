@@ -1,0 +1,25 @@
+<!-- pages/order/index.wxml -->
+<view class="order">
+    <!-- 有订单 -->
+    <view wx:if="{{isOrder}}">
+        <view class="order-item" wx:for="{{orderList}}" wx:key="index">
+            <view>
+                <view class="item-title">订单日期：</view>
+                <view class="item-info">{{item.order_date}}  {{item.order_time}}</view>
+            </view>
+            <view>
+                <view class="item-title">订单电话：</view>
+                <view class="item-info">{{item.order_tel}}</view>
+            </view>
+            <view>
+                <view class="item-title">订单价格：</view>
+                <view class="item-info price">￥{{item.total_price}}</view>
+            </view>
+        </view>
+    </view>
+    <!-- 无订单 -->
+    <view class="content-null" wx:else>
+        <view class="iconfont icondingdan"></view>
+        <view class="text">一个订单都没有, 快去下单吧 ~~</view>
+    </view>
+</view>

@@ -1,0 +1,134 @@
+.pay {
+    width: 100vw;
+    padding-bottom: 90rpx;
+
+    .revice-address {
+        border-bottom: 4rpx solid var(--themeColor);
+
+        .address-btn {
+            padding: 20rpx;
+
+            button {
+                width: 60%;
+            }
+        }
+
+        .address-info {
+            padding: 20rpx 40rpx;
+            display: flex;
+            flex-direction: column;
+
+            view {
+                display: flex;
+                justify-content: space-between;
+            }
+
+        }
+    }
+
+
+    //
+    .content {
+        width: 100vw;
+        overflow-y: auto;
+
+        .content-title {
+            padding: 30rpx 10rpx;
+            font-size: 32rpx;
+            border-bottom: 4rpx solid var(--themeColor);
+        }
+
+        .goods-item {
+            width: 100%;
+            display: flex;
+            border-bottom: 2rpx solid #ccc;
+
+            .goods-img {
+                flex: 2;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .goods-info {
+                padding: 20rpx;
+                flex: 5;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+
+
+                .info-name {
+                    display: -webkit-box;
+                    overflow: hidden;
+                    -webkit-box-orient: vertical;
+                    -webkit-line-clamp: 2;
+                    color: #666;
+                }
+
+
+                .number-wraper {
+                    display: flex;
+                    justify-content: space-between;
+
+
+                    .price {
+                        flex: 1;
+                        color: var(--themeColor);
+                    }
+
+
+                    .num {
+                        padding-right: 12rpx;
+                        text-align: center;
+                        overflow: hidden;
+                        word-wrap: normal;
+                        text-overflow: ellipsis;
+                    }
+
+                }
+
+            }
+        }
+    }
+
+    //
+    .footer-tabs {
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100vw;
+        height: 90rpx;
+        display: flex;
+        box-shadow: 0 -1rpx 5rpx 1rpx #ddd;
+
+        .price-total {
+            flex: 5;
+            display: flex;
+            align-items: center;
+
+
+            .total-text {
+                font-size: 24rpx;
+                margin-left: auto;
+            }
+
+            .total-num {
+                font-size: 32rpx;
+                margin-right: 20rpx;
+                color: var(--themeColor);
+            }
+
+        }
+
+        .pay-btn {
+            flex: 2;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: var(--themeColor);
+            color: white;
+        }
+    }
+
+}
